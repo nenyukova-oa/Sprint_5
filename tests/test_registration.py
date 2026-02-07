@@ -34,5 +34,5 @@ class TestRegistrationNEGATIVE:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
 
         reg_text = WebDriverWait(driver, 10, poll_frequency=0.5).until(EC.visibility_of_element_located(Locators.REG_POPUP)).text
-        assert reg_text == 'Некорректный пароль'
+        assert reg_text == TestData.ERROR_INVALID_PASSWORD
     

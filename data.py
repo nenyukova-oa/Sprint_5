@@ -18,3 +18,17 @@ def generate_registration_with_invalid_password():
     email = faker.email()
     password = faker.password(length=5)
     return name, email, password
+
+# Ожидаемые ответы
+
+class TestData:
+    # для раздела регистрация
+    ERROR_INVALID_PASSWORD = 'Некорректный пароль'   
+    # для входа в аккаунт
+    PROFILE_TEXT = 'Профиль'
+    # текст раздела Булки
+    BUNS_T = 'Булки'
+    # текст раздела Соусы
+    SAUCES_T = 'Соусы'
+    # текст раздела Начинки
+    FILLINGS_T = 'Начинки'
